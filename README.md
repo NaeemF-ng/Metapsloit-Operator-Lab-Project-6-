@@ -25,7 +25,7 @@ The objective of this project was to simulate realistic red team and penetration
 []()
 
 ## Findings
-
+• Since I became root after getting a shell, I had searched for the .bak files and I had access to them. The contents of .bak files consisted of usernames and hashes, creating another means of re-entry
 
 ## Post Exploitation Activities
 • After initial compromise I performed post compromise internal to identify additional services that are not visible from an external standpoint.
