@@ -22,10 +22,13 @@ The objective of this project was to simulate realistic red team and penetration
 
 • The exploit only required me to fill in the RHOSTS(Metasploitable-IP) and my LHOST(Kali-IP). I ran the exploit and it was successful allowing me to gain initial access through from a shell as the root user.
 
-[]()
+
 
 ## Findings
 • Since I became root after getting a shell, I had searched for the .bak files and I had access to them. The contents of .bak files consisted of usernames and hashes, creating another means of re-entry
+• known hosts
+• etc resolv.conf
+• tec/network//interfaces
 
 ## Post Exploitation Activities
 • After initial compromise I performed post compromise internal to identify additional services that are not visible from an external standpoint.
