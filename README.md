@@ -20,11 +20,15 @@ The objective of this project was to simulate realistic red team and penetration
 
 ## Attack Path / Methodology
 • I ran an nmap scan against the target and discovered that the the OS was metasploitable, known for having a large attack surface as there are many msiconfigurations exposed services. 
+![nmap scan](images/nmap-scan.png)
+![nmap scan](images/nmap-scan2.png)
 
 • To gain a foothold onto the target machine I chose samba because I know that samba has a lot of known exploits, with one being exploit/multi/samba/usermap_script as the target is succeptible to, for the samba version 3.0.20
 
-• The exploit only required me to fill in the RHOSTS(Metasploitable-IP) and my LHOST(Kali-IP). This exploit resulted in immediate access as the root user due to a severe misconfiguration and vulnerable samba version, it didn't require me to any methods of privilege escalation. 
-
+• The exploit only required me to fill in the RHOSTS(Metasploitable-IP) and my LHOST(Kali-IP). This exploit resulted in immediate access as the root user due to a severe misconfiguration and vulnerable samba version, it didn't require me to any methods of privilege escalation, so I stabilized the shell for better functionality.
+![](images/msfsetup.png)
+![](images/msfsetup2.png)
+![](images/msfsetup3.png)
 
 ## Initial Access 
 • Service identified: Samba (port 139/445)
@@ -35,7 +39,10 @@ The objective of this project was to simulate realistic red team and penetration
 
 
 ## Findings
-• Bak files are backup copies of important documents, since I became root after getting a shell, I had searched for the .bak files and I had access to them. The contents of .bak files consisted of usernames and hashes, creating another means of re-entry
+• Since I became root after getting a shell, I had searched for the .bak files and I had access to them, Bak files are backup copies of important documents. The contents of .bak files consisted of usernames and hashes, creating another means of re-entry. 
+![](images/bak-file-search.png)
+![](images/passwd-shadow-extrac.png)
+
 
 • The known_hosts file stores SSH host fingerprints for systems that the target machine has previously connected to. In a real world scenario this would aid lateral movemnt by mapping out the next potential targets that the target system already trusts
 • The /etc/resolv.conf file was reviewed to identify DNS configuration details and only contained an ip. 
