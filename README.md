@@ -10,6 +10,9 @@ The objective of this project was to simulate realistic red team and penetration
 • For this project I used both my kali and metasploitble vm's on a NAT Network isolated from the internet creating a safe and ethical environment. 
 • Kali = Attacker
 • Target = Metapsloitable
+![](images/Homelab-setup1.png)
+![](images/Homelab-setup2.png)
+
 
 ## Tools Used
 • nmap
