@@ -42,6 +42,8 @@ The objective of this project was to simulate realistic red team and penetration
 • Since I became root after getting a shell, I had searched for the .bak files and I had access to them, Bak files are backup copies of important documents. The contents of .bak files consisted of usernames and hashes, creating another means of re-entry. 
 ![](images/bak-file-search.png)
 ![](images/passwd-shadow-extrac.png)
+![](images/shadow-bak.png)
+
 
 
 • The known_hosts file stores SSH host fingerprints for systems that the target machine has previously connected to. In a real world scenario this would aid lateral movement by mapping out the next potential targets that the target system already trusts
