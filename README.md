@@ -44,6 +44,8 @@ The objective of this project was to simulate realistic red team and penetration
 ![](images/passwd-shadow-extrac.png)
 ![](images/shadow-bak.png)
 
+• 
+
 
 
 • The known_hosts file stores SSH host fingerprints for systems that the target machine has previously connected to. In a real world scenario this would aid lateral movement by mapping out the next potential targets that the target system already trusts
@@ -68,6 +70,8 @@ The objective of this project was to simulate realistic red team and penetration
 
 • In a real penetration test, this step is critical because systems usually expose internal only services, management interfaces or trust relationships that cannot be discovered from external recon. Repeating this workflow helps develops muscle memory and mirrors post exploitation techniques within professional engagements. 
 
+![](images/post-exploit-enum2.png)
+![](images/post-exploit-enum.png)
 ![](images/network-enum.png)
 ![](images/network-enum2.png)
 ![](images/network-enum3.png)
@@ -84,9 +88,14 @@ The objective of this project was to simulate realistic red team and penetration
 ![](images/msfexploitsuggester4.png)
 ![](images/bad-exploits.png)
 
+ • Before I began to look for suids manually, I ran the sudo -l just to see which permissions I was able to run to corroborate that the exploit suggester was accurate. 
+![](images/sudol-results.png)
+![](images/suidresults.png)
+
 
 ## Persistence & Re-Entry
 • After achieving full administrative access, I created a persistence mechanism to demonstrate how an attacker could maintain access between sessions. I added a controlled ssh key to the targets authroized_keys file, allowing me to ssh in as the root user without the need of a password
+![](images/targetsshenum.png)
 ![](images/authkey-persist2.png)
 ![](images/authkey-persist.png)
 ![](images/testing-persistence2.png)
