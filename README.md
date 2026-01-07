@@ -85,7 +85,8 @@ The objective of this project was to simulate realistic red team and penetration
 
 ## Persistence & Re-Entry
 • After achieving full administrative access, I created a persistence mechanism to demonstrate how an attacker could maintain access between sessions. I added a controlled ssh key to the targets authroized_keys file, allowing me to ssh in as the root user without the need of a password
-![](images/testing-persistence1.png)
+![](images/authkey-persist2.png)
+![](images/authkey-persist.png)
 ![](images/testing-persistence2.png)
 
 Note: Although the ssh persistence technique was implemented correctly, old legacy SSH configuration and key compatibility issues on Metasploitable prevented successful re-entry. The technique itself would work and is valid in a real world scenario.
