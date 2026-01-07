@@ -53,6 +53,8 @@ The objective of this project was to simulate realistic red team and penetration
 • The /etc/resolv.conf file was reviewed to identify DNS configuration details and only contained an ip. 
 
 • The etc/network/interfaces file usually contains useful networking information such as network interfaces, static ip's, gateways, and subnets. In this case it contained the loopback and primary network interfaces which are essential for post exploitation allowing attackers to interact with internal services including databases, api's,or managemnet interfaces.
+![](images/important-files.png)
+![](images/important-files2.png)
 ![](images/last-extrac.png)
 ![](images/last-extrac.png)
 ![](images/Download-proof.png)
