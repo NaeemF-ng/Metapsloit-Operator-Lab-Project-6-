@@ -44,10 +44,17 @@ The objective of this project was to simulate realistic red team and penetration
 ![](images/passwd-shadow-extrac.png)
 
 
-• The known_hosts file stores SSH host fingerprints for systems that the target machine has previously connected to. In a real world scenario this would aid lateral movemnt by mapping out the next potential targets that the target system already trusts
+• The known_hosts file stores SSH host fingerprints for systems that the target machine has previously connected to. In a real world scenario this would aid lateral movement by mapping out the next potential targets that the target system already trusts
+![](images/knownhosts-extrac.png)
+
+
 • The /etc/resolv.conf file was reviewed to identify DNS configuration details and only contained an ip. 
 
-• The etc/network/interfaces file usually contains useful networking information such as network interfaces, static ip's, gateways, and subnets. In this case it contained the loopback and primary network interfaces which are essential for post exploitation allowing attackers to interact with internal services including databases, api's,or managemnet interfaces . 
+• The etc/network/interfaces file usually contains useful networking information such as network interfaces, static ip's, gateways, and subnets. In this case it contained the loopback and primary network interfaces which are essential for post exploitation allowing attackers to interact with internal services including databases, api's,or managemnet interfaces.
+![](images/last-extrac.png)
+![](images/last-extrac.png)
+
+
 
 ## Post Exploitation Activities
 • After initial compromise I performed post compromise internal to identify additional services that are not visible from an external standpoint.
@@ -55,6 +62,16 @@ The objective of this project was to simulate realistic red team and penetration
 • The purpose of running commands such as ip a, ip route, arp -a, netstat -tulpn, ss -tulpn and ip a was to gain more insight on the internal environment including active interfaces, routing paths, neighboring hosts, and services that re listening locally. 
 
 • In a real penetration test, this step is critical because systems usually expose internal only services, management interfaces or trust relationships that cannot be discovered from external recon. Repeating this workflow helps develops muscle memory and mirrors post exploitation techniques within professional engagements. 
+
+![](images/network-enum.png)
+![](images/network-enum2.png)
+![](images/network-enum3.png)
+![](images/network-enum4.png)
+![](images/network-enum5.png)
+![](images/network-enum6.png)
+![](images/network-enum7.png)
+
+
 
 ## Persistence & Re-Entry
 • After achieving full administrative access, I created a persistence mechanism to demonstrate how an attacker could maintain access between sessions. I added a controlled ssh key to the targets authroized_keys file, allowing me to ssh in as the root user without the need of a password
