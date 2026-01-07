@@ -74,6 +74,13 @@ The objective of this project was to simulate realistic red team and penetration
 ![](images/network-enum6.png)
 ![](images/network-enum7.png)
 
+• I ran the post multi exploit suggester script after establishing a session on the target to see what I could potentially could be used to escalate privilges. As you can see within the screenshot that it points out the vulnerable nmap suid binary but I already discovered that manually.  
+
+![](images/msfexploitsuggester.png)
+![](images/msfexploitsuggester2.png)
+![](images/msfexploitsuggester3.png)
+![](images/msfexploitsuggester4.png)
+![](images/bad-exploits.png)
 
 
 ## Persistence & Re-Entry
